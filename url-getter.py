@@ -32,7 +32,7 @@ while True:
       print("call: ", x) 
       req = urllib.request.Request(x, headers={'User-Agent': random.choice(user_agent)})
       try: urllib.request.urlopen(req, timeout=10)
-      except urllib.error.URLError as e:
+      except Exception as e:
           print(e.reason)
           pass
       time.sleep(5)
